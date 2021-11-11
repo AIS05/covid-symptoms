@@ -1,0 +1,2 @@
+# covid-symptoms
+(School Project)

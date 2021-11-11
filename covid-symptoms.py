@@ -1,4 +1,4 @@
-# Aaron Stacey - 
+# Aaron Stacey - https://github.com/AIS05
 from math import ceil
 
 # Dictionary key: "symptom" : "weight"
@@ -17,7 +17,7 @@ symptoms = {
 
 
 def questionnare():
-    """Asks the user questions about the symptoms he is having and calculates the percentage chance"""
+    """Asks the user questions and calculates % chance based on the input"""
     total = 0
     l_symptoms = list(symptoms)
     l_weights = list(symptoms.values())
@@ -25,7 +25,7 @@ def questionnare():
         print()
         print(f"Have you experienced the following symptom '{n}'")
         while True:
-            uIn = input("Type in 'yes' or 'no' > ").upper()            
+            uIn = input("Type in 'yes' or 'no' > ").upper()
             if uIn == "YES":
                 total += l_weights[i]
                 break
@@ -41,7 +41,7 @@ def main():
     per = questionnare()
     print()
     print(f"There is a {per}% of you having covid.")
-    print(f"You should self isolate and get a PCR test.") if per > 45 else print("You dont need to get a PCR test.")
+    print("You should self isolate and get a PCR test.") if per > 45 else print("You dont need to get a PCR test.")
 
 
 if __name__ == "__main__":
